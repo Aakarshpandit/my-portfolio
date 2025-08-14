@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aakarsh Portfolio</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="n.css">
+</head>
+<body>
+    <header>
+        <a href="#home" class="logo">Aakarsh Bhardwaj</a>
+         <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+          </div>
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home" class="home">
+        <div class="home-img">
+            <img src="m1.jpeg" alt="Profile Picture">
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span>Aakarsh Bhardwaj</span></h1>
+            <h2 class="typing-text">I'm a <span></span></h2>
+     
+            <p>Welcome to my portfolio! I’m passionate about creating modern, functional, and aesthetic web solutions with HTML, CSS, and JavaScript. Alongside web development, I’m also a data analyst who enjoys turning raw data into meaningful insights using tools like Excel, SQL, and Power BI.</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/aakarsh-bhardwaj-186a37329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Aakarshpandit"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/akki007pandit?igsh=MTV4NXZqbmlzOTRyMg=="><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="#" class="btn">Hire me</a>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="edu-card">
+            <h3>B.Tech in Computer Science</h3>
+            <p>ALIGARH COLLEGE OF ENGINEERING AND TECHNOLOGY, 2023 - 2027</p>
+        </div>
+        <div class="edu-card">
+            <h3>12th Grade</h3>
+            <p>DOON PUBLIC School, 2022-2023</p>
+        </div>
+        <div class="edu-card">
+    <h3>Certification in Web Development</h3>
+    <p>Udemy, 2024</p>
+</div>
+
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Online Clothing Store</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>HTML, CSS, JavaScript-based e-commerce site with cart feature.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Portfolio Website</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>A personal portfolio with animated hover effects.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <h3>Weather App</h3>
+        </div>
+        <div class="flip-card-back">
+            <p>JavaScript-based weather application using OpenWeather API.</p>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:aabhardwaj1717@gmail.com">aabhardwaj1717@gmail.com</a></p>
+        <p>Phone: +91 97191414005</p>
+    </section>
+
+   <script>
+    // Smooth scrolling
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+            // Close menu on mobile after click
+            document.querySelector("nav").classList.remove("active");
+            document.querySelector(".menu-btn i").classList.remove("fa-times");
+            document.querySelector(".menu-btn i").classList.add("fa-bars");
+        });
+    });
+
+    // Toggle mobile menu
+    const menuBtn = document.querySelector(".menu-btn i");
+    const nav = document.querySelector("nav");
+
+    document.querySelector(".menu-btn").addEventListener("click", () => {
+        nav.classList.toggle("active");
+        menuBtn.classList.toggle("fa-bars");
+        menuBtn.classList.toggle("fa-times");
+    });
+</script>
+
+</body>
+</html>
